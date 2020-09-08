@@ -1,0 +1,243 @@
+<!doctype>
+<head>
+<title>
+Sign Up Page
+</title>
+<style>
+		* {
+  box-sizing: border-box;
+}
+	   div{ 
+        page-break-inside: avoid;
+    }	
+  input[type=text],input[type=email], input[type=password],input[type=tel], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+body {
+  background-color: #839192;
+}
+
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  justify:center-right;
+  text-decoration: none;
+  
+  font-size: 16px;
+}
+
+input[type=radio]{
+     margin-top: 13px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 80%;
+  margin:auto;
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid red;
+  z-index:9;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 200px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 12px;
+  border: 2px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 380px;
+  padding: 15px;
+  background-color: red;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+  
+	</style>
+</head>
+<body >
+
+<div >
+<h2>Registration Form</h2>
+  <form action="/action_page.php" >
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="name" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="password">Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="password" name="password" placeholder="Your password..">
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="gender">Gender</label>
+      </div>
+      <div class="col-75">
+      	<input type="radio" name="gender" value="male" required> Male
+      	<input type="radio" name="gender" value="male" required> Female
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="Your email..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Mobile No.</label>
+      </div>
+      <div class="col-75">
+        <input type="tel" id="mobile" name="mobile" placeholder="+91 1234567894">		
+      </div>
+	  
+	  <div class="col-75">
+        <input type="button" class="button" onclick="myFunction()"  value="Submit Button">
+
+<script>
+function myFunction() {
+  alert("Your Registration form submit Successfully................");
+}
+</script>
+</script>		
+      </div>
+	  
+	  <div class="col-75">
+        <input type="button" class="button" onclick="location.href='Login.html'"  value="Login" >
+	   
+	  </div>
+    </div>
+	
+	
+	
+  </form>
+  
+ 
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
